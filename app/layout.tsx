@@ -1,18 +1,22 @@
-import "./globals.css";
+import "./globals.css"
+import { Analytics } from "@vercel/analytics/react"
 
 export const metadata = {
   title: "Haunted Funnel Breaker",
-  description: "AI job search intelligence engine",
-};
+  description: "AI job search intelligence engine"
+}
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: React.ReactNode
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        {children}
+        <Analytics />
+      </body>
     </html>
-  );
+  )
 }
